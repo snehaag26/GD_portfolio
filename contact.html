@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Sneha Agrawal — UI/UX Designer</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <!-- Grain Overlay & Grid -->
+  <div class="grain-overlay"></div>
+  <div class="grid-overlay"></div>
+  <div class="scan-line"></div>
+
+  <!-- Corner UI Framing -->
+  <div class="corner-ui top-left">SYS.VER: 9.0.4</div>
+  <div class="corner-ui top-right">STATUS: ONLINE</div>
+  <div class="corner-ui bottom-left">[ GEO: 34.0522, -118.2437 ]</div>
+
+  <!-- Background Layers -->
+  <div id="layer-bg"></div>
+  <div id="layer-mid"></div>
+
+  <!-- Custom Cursor -->
+  <div id="custom-cursor">
+    <div class="cursor-inner"></div>
+    <div class="cursor-label"></div>
+  </div>
+
+  <!-- Global Site Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="nav-brand">
+        <span class="brand-code">SYS.01 //</span>
+        <span class="brand-name">SNEHA AGRAWAL</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main Navigation">
+        <a href="/" class="nav-link" data-page="home">
+          <span class="nav-idx">01</span>HOME
+        </a>
+        <a href="/about.html" class="nav-link" data-page="about">
+          <span class="nav-idx">02</span>ABOUT
+        </a>
+        <a href="/work.html" class="nav-link" data-page="work">
+          <span class="nav-idx">03</span>WORK
+        </a>
+        <a href="/lab.html" class="nav-link" data-page="lab">
+          <span class="nav-idx">04</span>LAB
+        </a>
+        <a href="/contact.html" class="nav-link active" data-page="contact">
+          <span class="nav-idx">05</span>CONTACT
+        </a>
+      </nav>
+
+      <div class="header-status">
+        <span class="status-pulse"></span>
+        <span class="status-text">COMMUNICATION // READY</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content (Foreground) -->
+  <div id="app" class="foreground">
+
+    <!-- Section: Contact -->
+    <section id="contact" class="panel" style="padding-top: 100px; padding-bottom: 120px; min-height: 100vh; box-sizing: border-box;">
+      <div class="contact-content">
+
+        <h1 class="section-title" style="text-align: center; align-self: center; margin-bottom: 0.75rem;">GET IN TOUCH</h1>
+        <p style="font-family: var(--font-mono); font-size: 0.95rem; color: rgba(240,240,240,0.7); max-width: 550px; margin: 0 auto 1.8rem; line-height: 1.6;">
+          Have a project in mind, looking for design collaboration, or just want to connect? Let's build something extraordinary together.
+        </p>
+
+        <a href="mailto:snehha.ag2610@gmail.com" class="magnetic-btn cta">
+          INITIATE_CONTACT
+        </a>
+
+        <div class="social-links" style="margin-top: 1.5rem;">
+
+          <a href="https://www.instagram.com/snehha_ag26/" target="_blank" rel="noopener noreferrer"
+            class="magnetic-btn social-link">
+            <span>INSTAGRAM</span>
+            <span class="arr">↗</span>
+          </a>
+
+          <a href="https://www.linkedin.com/in/sneha-agrawal-93a489295/" target="_blank" rel="noopener noreferrer"
+            class="magnetic-btn social-link">
+            <span>LINKEDIN</span>
+            <span class="arr">↗</span>
+          </a>
+
+          <a href="mailto:snehha.ag2610@gmail.com" class="magnetic-btn social-link">
+            <span>EMAIL</span>
+            <span class="arr">↗</span>
+          </a>
+          
+          <div class="magnetic-btn social-link">
+            <span>+91 8319696901</span>
+            <span class="arr">↗</span>
+          </div>
+
+        </div>
+
+        <div class="footer-bottom">
+          <div class="glitch-text" data-text="AWAITING CONNECTION...">
+            AWAITING CONNECTION...
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Navigation Orb -->
+  <div id="nav-orb">
+    <div class="orb-ring"></div>
+    <div class="orb-core"></div>
+    <div class="menu-tag">MENU</div>
+    <div class="radial-menu">
+      <a class="menu-item" href="/">HOME</a>
+      <a class="menu-item" href="/about.html">ABOUT</a>
+      <a class="menu-item" href="/work.html">WORK</a>
+      <a class="menu-item" href="/lab.html">LAB</a>
+      <a class="menu-item active" href="/contact.html">CONTACT</a>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

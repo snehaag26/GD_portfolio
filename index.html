@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sneha Agrawal | Ui/Ux Designer (frontend devleoper)</title>
+  <title>Sneha Agrawal | UI/UX Designer & Creative Developer</title>
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,7 +25,7 @@
   <div class="corner-ui top-right">STATUS: ONLINE</div>
   <div class="corner-ui bottom-left">[ GEO: 34.0522, -118.2437 ]</div>
 
-  <!-- 5D Layers -->
+  <!-- 5D Depth Background Layers -->
   <div id="layer-bg"></div>
   <div id="layer-mid"></div>
 
@@ -35,13 +35,46 @@
     <div class="cursor-label"></div>
   </div>
 
+  <!-- Global Site Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="nav-brand">
+        <span class="brand-code">SYS.01 //</span>
+        <span class="brand-name">SNEHA AGRAWAL</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main Navigation">
+        <a href="/" class="nav-link active" data-page="home">
+          <span class="nav-idx">01</span>HOME
+        </a>
+        <a href="/about.html" class="nav-link" data-page="about">
+          <span class="nav-idx">02</span>ABOUT
+        </a>
+        <a href="/work.html" class="nav-link" data-page="work">
+          <span class="nav-idx">03</span>WORK
+        </a>
+        <a href="/lab.html" class="nav-link" data-page="lab">
+          <span class="nav-idx">04</span>LAB
+        </a>
+        <a href="/contact.html" class="nav-link" data-page="contact">
+          <span class="nav-idx">05</span>CONTACT
+        </a>
+      </nav>
+
+      <div class="header-status">
+        <span class="status-pulse"></span>
+        <span class="status-text">PORTFOLIO // MULTIPAGE</span>
+      </div>
+    </div>
+  </header>
+
   <!-- Main Content (Foreground) -->
   <div id="app" class="foreground">
 
     <!-- Section 1: Hero -->
-    <section id="hero" class="panel">
+    <section id="hero" class="panel" style="padding-top: 80px; padding-bottom: 110px;">
       <h1 class="kinetic-text" data-text="Sneha Agrawal">Sneha Agrawal</h1>
-      <h2 class="sub-hero">Ui/Ux Designer (frontend devleoper)</h2>
+      <h2 class="sub-hero">Ui/Ux Designer (frontend developer)</h2>
 
       <!-- Density elements -->
       <div class="hero-decorative">
@@ -52,7 +85,7 @@
             <div class="fill"></div>
           </div>
         </div>
-        <div class="random-data">> INITIALIZING SEQUENCE...<br>> OVERRIDE ACCEPTED</div>
+        <div class="random-data">> SYSTEM ONLINE<br>> ALL PROTOCOLS VERIFIED</div>
       </div>
 
       <div class="hero-blobs">
@@ -60,204 +93,102 @@
         <div class="blob blob-2"></div>
         <div class="blob blob-3"></div>
       </div>
-    </section>
 
-    <!-- Section 2: About -->
-    <section id="about" class="panel split-screen relative-panel">
-      <div class="marquee-bg">
-        <div class="marquee-track">
-          <span>DIGITAL BRUTALISM — CHAOS AND CONTROL — </span>
-          <span>DIGITAL BRUTALISM — CHAOS AND CONTROL — </span>
-          <span>DIGITAL BRUTALISM — CHAOS AND CONTROL — </span>
-          <span>DIGITAL BRUTALISM — CHAOS AND CONTROL — </span>
-        </div>
-      </div>
-
-      <div class="about-left">
-        <div class="avatar-container">
-          <img src="/sneha.jpg" alt="Sneha Agrawal" class="avatar-img" />
-          <div class="avatar-glitch-layer layer-1"></div>
-          <div class="avatar-glitch-layer layer-2"></div>
-        </div>
-        <div class="skills-constellation">
-          <!-- Draggable skill nodes -->
-          <div class="skill-node">UI/UX</div>
-          <div class="skill-node">Creative Dev</div>
-          <div class="skill-node">Motion</div>
-          <div class="skill-node">3D</div>
-        </div>
-      </div>
-      <div class="about-right glass-panel">
-        <div class="about-label">[ SYS.LOG: IDENTITY ]</div>
-        <p class="scroll-text">Hi, I'm <span class="highlight">Sneha</span> — a passionate UI/UX designer dedicated to
-          creating <span class="highlight">intuitive</span>, <span class="highlight">user-centered</span>, and visually
-          engaging digital experiences. I enjoy transforming ideas into meaningful interfaces by blending creativity
-          with thoughtful problem-solving. With a strong eye for detail and a constant drive to learn, I strive to
-          design products that are not only beautiful but also <span class="highlight">effortless to use</span>.</p>
-
-        <div class="tech-specs">
-          <div class="spec-row"><span>Pixels</span><span>crafted</span></div>
-          <div class="spec-row"><span>Problem</span><span>Solved</span></div>
-          <div class="spec-row"><span>Ideas</span><span>Prototyped</span></div>
-        </div>
-
-        <div class="stats">
-          <div class="stat"><span class="count" data-target="42">0</span> PROJECTS</div>
-          <div class="stat"><span class="count" data-target="1337">0</span> COFFEES</div>
-          <div class="stat"><span class="count" data-target="5">0</span> YEARS OF CHAOS</div>
-        </div>
+      <!-- Quick Action Buttons -->
+      <div style="display: flex; gap: 1.5rem; margin-top: 1.75rem; z-index: 5; flex-wrap: wrap; justify-content: center;">
+        <a href="/work.html" class="magnetic-btn" style="font-size: 1.1rem; padding: 0.85rem 2.2rem; text-decoration: none;">
+          VIEW WORK ↗
+        </a>
+        <a href="/about.html" class="magnetic-btn" style="font-size: 1.1rem; padding: 0.85rem 2.2rem; background: transparent; border: 1px solid var(--off-white); color: var(--off-white); text-decoration: none;">
+          ABOUT SNEHA ↗
+        </a>
       </div>
     </section>
 
-    <!-- Section 2.5: Timeline (Experience & Education) -->
-    <section id="timeline" class="panel timeline-panel">
-      <div class="timeline-container">
-        <div class="timeline-col">
-          <h2 class="section-title">EXPERIENCE</h2>
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content glass-panel-small">
-              <div class="timeline-date">[ CLASS 11TH & 12TH ]</div>
-              <div class="timeline-role">Editorial Head & Lead Designer</div>
-              <div class="timeline-desc">Handled all magazine work and everything related to designing for the school.
-                Orchestrated visual identity for school events and publications.</div>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content glass-panel-small">
-              <div class="timeline-date">[ CLASS 10TH // 5 MONTHS ]</div>
-              <div class="timeline-role">Graphic Design Intern</div>
-              <div class="timeline-desc">Interned as a graphic designer. Worked closely with the school to design
-                magazine layouts and essential templates.</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="timeline-col">
-          <h2 class="section-title">EDUCATION</h2>
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content glass-panel-small">
-              <div class="timeline-date">[ 2025 - 2029 ]</div>
-              <div class="timeline-role">B.Tech CS & AI</div>
-              <div class="timeline-desc">Newton School of Technology</div>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content glass-panel-small">
-              <div class="timeline-date">[ 2025 ]</div>
-              <div class="timeline-role">Class 12th (CBSE)</div>
-              <div class="timeline-desc">Academic World School</div>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content glass-panel-small">
-              <div class="timeline-date">[ 2023 ]</div>
-              <div class="timeline-role">Class 10th (ICSE)</div>
-              <div class="timeline-desc">Carmel Public School</div>
-            </div>
-          </div>
-        </div>
+    <!-- Section 2: Multipage Exploration Hub -->
+    <section class="home-portals-section">
+      <div class="portals-header">
+        <div class="portals-tag">[ SYS.NAV: ARCHITECTURE // 04_PORTALS ]</div>
+        <h2 class="portals-title">EXPLORE PORTFOLIO</h2>
       </div>
-    </section>
 
-    <!-- Section 3: Workspace -->
-    <section id="workspace" class="panel">
-      <h2 class="section-title">THE LAB</h2>
-      <div class="desk-area">
-        <div class="drag-item tablet" data-label="TABLET"></div>
-        <div class="drag-item swatches" data-label="COLORS">
-          <div class="color-box" style="background:var(--acid-green)"></div>
-          <div class="color-box" style="background:var(--deep-violet)"></div>
-          <div class="color-box" style="background:var(--near-black)"></div>
-          <div class="color-box" style="background:var(--chrome)"></div>
-        </div>
-        <div class="drag-item browser" data-label="PREVIEW">
-          <div class="browser-header"><span></span><span></span><span></span></div>
-          <div class="browser-content">Loading...</div>
-        </div>
-        <div class="drag-item widget-clock" data-label="TIME">
-          <div class="clock-time">12:00:00</div>
-          <div class="clock-tz">LOCAL TIME</div>
-        </div>
-      </div>
-    </section>
+      <div class="portals-grid">
 
-    <!-- Section 4: Projects (Horizontal) -->
-    <section id="projects" class="panel horizontal-container">
-      <div class="horizontal-scroll">
-
-        <div class="project-card" data-title="AURA" data-color="var(--acid-green)">
-          <div class="card-inner">
-            <img src="/aura.png" alt="Aura Project" class="project-img">
+        <!-- Portal 1: About -->
+        <a href="/about.html" class="portal-card" style="--portal-accent: var(--acid-green);">
+          <div>
+            <div class="portal-top">
+              <span class="portal-num">PORTAL // 01</span>
+              <span class="portal-badge">IDENTITY</span>
+            </div>
+            <h3 class="portal-name">ABOUT SNEHA</h3>
+            <p class="portal-desc">
+              Design philosophy, background, interactive skills constellation, and education/experience journey. Read in one concise view.
+            </p>
           </div>
-        </div>
-
-        <div class="project-card" data-title="MAYA" data-color="var(--deep-violet)">
-          <div class="card-inner">
-            <img src="/maya.png" alt="Maya Project" class="project-img">
+          <div class="portal-action">
+            <span>ENTER ABOUT PAGE</span>
+            <span>&rarr;</span>
           </div>
-        </div>
-
-        <div class="project-card" data-title="MAYA V2" data-color="var(--chrome)">
-          <div class="card-inner">
-            <img src="/maya2.png" alt="Maya Version 2" class="project-img">
-          </div>
-        </div>
-
-        <div class="project-card" data-title="VOLTAGE" data-color="#ff00ff">
-          <div class="card-inner">
-            <img src="/voltage.png" alt="Voltage Project" class="project-img">
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Section 5: Contact -->
-    <section id="contact" class="panel">
-      <div class="contact-content">
-
-        <a href="mailto:snehha.ag2610@gmail.com" class="magnetic-btn cta">
-          INITIATE_CONTACT
         </a>
 
-        <div class="social-links">
-
-          <a href="https://www.instagram.com/snehha_ag26/" target="_blank" rel="noopener noreferrer"
-            class="magnetic-btn social-link">
-            <span>INSTAGRAM</span>
-            <span class="arr">↗</span>
-          </a>
-
-          <a href="https://www.linkedin.com/in/sneha-agrawal-93a489295/" target="_blank" rel="noopener noreferrer"
-            class="magnetic-btn social-link">
-            <span>LINKEDIN</span>
-            <span class="arr">↗</span>
-          </a>
-
-          <a href="mailto:snehha.ag2610@gmail.com" class="magnetic-btn social-link">
-            <span>EMAIL</span>
-            <span class="arr">↗</span>
-          </a>
-          <div class="magnetic-btn social-link">
-            <span>+91 8319696901</span>
-            <span class="arr">↗</span>
+        <!-- Portal 2: Work -->
+        <a href="/work.html" class="portal-card" style="--portal-accent: #ccff00;">
+          <div>
+            <div class="portal-top">
+              <span class="portal-num">PORTAL // 02</span>
+              <span class="portal-badge">4 PROJECTS</span>
+            </div>
+            <h3 class="portal-name">SELECTED WORK</h3>
+            <p class="portal-desc">
+              Curated UI/UX designs including Aura, Maya Chen, Maya Okafor, and Voltage. Featuring instant photo widening and zoom inspection.
+            </p>
           </div>
-
-        </div>
-
-        <div class="footer-bottom">
-          <div class="glitch-text" data-text="AWAITING CONNECTION...">
-            AWAITING CONNECTION...
+          <div class="portal-action">
+            <span>BROWSE PROJECTS</span>
+            <span>&rarr;</span>
           </div>
-        </div>
+        </a>
+
+        <!-- Portal 3: The Lab -->
+        <a href="/lab.html" class="portal-card" style="--portal-accent: var(--deep-violet);">
+          <div>
+            <div class="portal-top">
+              <span class="portal-num">PORTAL // 03</span>
+              <span class="portal-badge">SANDBOX</span>
+            </div>
+            <h3 class="portal-name">THE LAB</h3>
+            <p class="portal-desc">
+              Interactive experimental desk. Drag, reorder, and play with tablet widgets, design swatches, and live local time.
+            </p>
+          </div>
+          <div class="portal-action">
+            <span>ENTER THE LAB</span>
+            <span>&rarr;</span>
+          </div>
+        </a>
+
+        <!-- Portal 4: Contact -->
+        <a href="/contact.html" class="portal-card" style="--portal-accent: #ff00ff;">
+          <div>
+            <div class="portal-top">
+              <span class="portal-num">PORTAL // 04</span>
+              <span class="portal-badge">GET IN TOUCH</span>
+            </div>
+            <h3 class="portal-name">CONTACT</h3>
+            <p class="portal-desc">
+              Ready to collaborate or discuss an idea? Connect directly via email, Instagram, LinkedIn, or phone.
+            </p>
+          </div>
+          <div class="portal-action">
+            <span>INITIATE CONTACT</span>
+            <span>&rarr;</span>
+          </div>
+        </a>
 
       </div>
     </section>
+
 
   </div>
 
@@ -267,12 +198,11 @@
     <div class="orb-core"></div>
     <div class="menu-tag">MENU</div>
     <div class="radial-menu">
-      <div class="menu-item" data-target="#hero">HOME</div>
-      <div class="menu-item" data-target="#about">ABOUT</div>
-      <div class="menu-item" data-target="#timeline">JOURNEY</div>
-      <div class="menu-item" data-target="#workspace">LAB</div>
-      <div class="menu-item" data-target="#projects">WORK</div>
-      <div class="menu-item" data-target="#contact">CONTACT</div>
+      <a class="menu-item active" href="/">HOME</a>
+      <a class="menu-item" href="/about.html">ABOUT</a>
+      <a class="menu-item" href="/work.html">WORK</a>
+      <a class="menu-item" href="/lab.html">LAB</a>
+      <a class="menu-item" href="/contact.html">CONTACT</a>
     </div>
   </div>
 

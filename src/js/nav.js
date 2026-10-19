@@ -21,51 +21,79 @@ export function initNav(lenis) {
     orb.classList.toggle('open', isOpen);
     
     if (isOpen) {
-      // Animate core
-      gsap.to(orbCore, { scale: 0.8, backgroundColor: 'var(--acid-green)', duration: 0.3 });
-      
-      // Fan out menu items
-      const radius = 100;
+      // Fan out menu items with balanced radius and clearance so no items overlap
+      const radius = 120;
       const totalItems = menuItems.length;
-      const angleStep = Math.PI / (totalItems - 1); // semicircle top
+      const startAngle = (170 * Math.PI) / 180;
+      const endAngle = (10 * Math.PI) / 180;
+      const angleStep = (startAngle - endAngle) / (totalItems - 1);
       
       menuItems.forEach((item, index) => {
-        const angle = Math.PI - (angleStep * index); // 180 to 0 degrees
+        const angle = startAngle - (angleStep * index);
         const x = Math.cos(angle) * radius;
         const y = -Math.sin(angle) * radius; // negative y is up
         
         gsap.to(item, {
           x: x, y: y, scale: 1, opacity: 1,
-          duration: 0.5,
-          ease: 'back.out(1.5)',
-          delay: index * 0.05
+          duration: 0.45,
+          ease: 'back.out(1.4)',
+          delay: index * 0.04
         });
       });
     } else {
       // Close menu
-      gsap.to(orbCore, { scale: 1, backgroundColor: 'var(--off-white)', duration: 0.3 });
       gsap.to(menuItems, {
         x: 0, y: 0, scale: 0, opacity: 0,
-        duration: 0.3,
+        duration: 0.25,
         ease: 'power2.in',
-        stagger: 0.05
+        stagger: 0.03
       });
+    }
+  });
+
+  // Active page indicator
+  const currentPath = window.location.pathname;
+  const navLinks = document.querySelectorAll('.nav-link, .menu-item');
+  
+  navLinks.forEach(link => {
+    const href = link.getAttribute('href');
+    if (href) {
+      const isHome = (href === '/' || href === '/index.html') && (currentPath === '/' || currentPath.endsWith('index.html') || currentPath === '');
+      const isMatch = href !== '/' && currentPath.includes(href.replace('.html', ''));
+      if (isHome || isMatch) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
     }
   });
 
   // Navigate on click
   menuItems.forEach(item => {
-    item.addEventListener('click', () => {
+    item.addEventListener('click', (e) => {
+      const href = item.getAttribute('href');
       const target = item.getAttribute('data-target');
-      lenis.scrollTo(target, { offset: 0, duration: 1.5, ease: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)) });
-      orbCore.click(); // close menu
+      
+      if (href && href !== '#') {
+        // If it's a link to another page or current page
+        orbCore.click();
+        return;
+      }
+      
+      if (target && lenis) {
+        e.preventDefault();
+        lenis.scrollTo(target, { offset: 0, duration: 1.5, ease: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)) });
+        orbCore.click(); // close menu
+      }
     });
   });
 
   // Scroll Progress Ring
-  lenis.on('scroll', ({ scroll, limit }) => {
-    const progress = scroll / limit;
-    // Simple rotation for the ring based on scroll
-    gsap.set(orbRing, { rotation: progress * 360 });
-  });
+  if (lenis && orbRing) {
+    lenis.on('scroll', ({ scroll, limit }) => {
+      if (!limit) return;
+      const progress = scroll / limit;
+      gsap.set(orbRing, { rotation: progress * 360 });
+    });
+  }
 }

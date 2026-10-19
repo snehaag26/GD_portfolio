@@ -6,6 +6,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { initCursor } from './js/cursor.js';
 import { initNav } from './js/nav.js';
 import { initAnimations } from './js/animations.js';
+import { initLightbox } from './js/lightbox.js';
 
 // Setup GSAP
 gsap.registerPlugin(ScrollTrigger);
@@ -41,6 +42,9 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // Section Animations (GSAP)
   initAnimations();
+
+  // Project Lightbox (Photo Widen Modal)
+  initLightbox(lenis);
 });
 
 // Refresh ScrollTrigger calculations after all images/resources load

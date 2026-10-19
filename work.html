@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Selected Work | Sneha Agrawal — UI/UX Designer</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <!-- Grain Overlay & Grid -->
+  <div class="grain-overlay"></div>
+  <div class="grid-overlay"></div>
+  <div class="scan-line"></div>
+
+  <!-- Corner UI Framing -->
+  <div class="corner-ui top-left">SYS.VER: 9.0.4</div>
+  <div class="corner-ui top-right">STATUS: ONLINE</div>
+  <div class="corner-ui bottom-left">[ GEO: 34.0522, -118.2437 ]</div>
+
+  <!-- Background Layers -->
+  <div id="layer-bg"></div>
+  <div id="layer-mid"></div>
+
+  <!-- Custom Cursor -->
+  <div id="custom-cursor">
+    <div class="cursor-inner"></div>
+    <div class="cursor-label"></div>
+  </div>
+
+  <!-- Global Site Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="nav-brand">
+        <span class="brand-code">SYS.01 //</span>
+        <span class="brand-name">SNEHA AGRAWAL</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main Navigation">
+        <a href="/" class="nav-link" data-page="home">
+          <span class="nav-idx">01</span>HOME
+        </a>
+        <a href="/about.html" class="nav-link" data-page="about">
+          <span class="nav-idx">02</span>ABOUT
+        </a>
+        <a href="/work.html" class="nav-link active" data-page="work">
+          <span class="nav-idx">03</span>WORK
+        </a>
+        <a href="/lab.html" class="nav-link" data-page="lab">
+          <span class="nav-idx">04</span>LAB
+        </a>
+        <a href="/contact.html" class="nav-link" data-page="contact">
+          <span class="nav-idx">05</span>CONTACT
+        </a>
+      </nav>
+
+      <div class="header-status">
+        <span class="status-pulse"></span>
+        <span class="status-text">PORTFOLIO // 4 PROJECTS</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content (Foreground) -->
+  <div id="app" class="foreground">
+
+    <!-- Section: Projects (Selected Work) -->
+    <section id="projects" class="panel work-section" style="padding-top: 120px;">
+      <div class="work-container">
+        
+        <!-- Header -->
+        <div class="work-header">
+          <div class="work-tag">[ SYS.LOG: ARCHIVE // SELECTED_WORKS ]</div>
+          <h1 class="section-title">SELECTED WORK</h1>
+          <p class="work-subtitle">
+            A curated showcase of UI/UX designs, digital systems, and creative direction. 
+            Click any photo below to widen and inspect in high-resolution detail.
+          </p>
+
+          <!-- Interactive Category Filters -->
+          <div class="work-filters">
+            <button class="filter-btn active" data-filter="all">
+              <span class="filter-indicator"></span>ALL [4]
+            </button>
+            <button class="filter-btn" data-filter="ui-ux">
+              <span class="filter-indicator"></span>UI/UX DESIGN
+            </button>
+            <button class="filter-btn" data-filter="design-system">
+              <span class="filter-indicator"></span>DESIGN SYSTEM
+            </button>
+            <button class="filter-btn" data-filter="branding">
+              <span class="filter-indicator"></span>BRANDING
+            </button>
+          </div>
+        </div>
+
+        <!-- Projects Showcase Grid -->
+        <div class="projects-grid">
+
+          <!-- Project 1: Aura -->
+          <article class="project-card" 
+            data-category="ui-ux" 
+            data-title="AURA — Sound Has A Shape" 
+            data-category-display="UI/UX & AUDIO INTERFACE"
+            data-desc="Spatial audio controller and acoustic hardware companion app featuring room-scale rendering, adaptive silence algorithms, and a driver array interface." 
+            data-accent="var(--acid-green)"
+            data-tags="Spatial Audio, Hardware UI, Mobile App, 2026"
+            data-src="/aura.png"
+            tabindex="0"
+            role="button"
+            aria-label="View Aura Project details and widen photo">
+            
+            <div class="project-img-wrapper">
+              <img src="/aura.png" alt="Aura Project - Sound Has A Shape" class="project-img" loading="lazy" />
+              <div class="expand-indicator">
+                <span class="expand-icon">⤢</span>
+                <span>CLICK TO WIDEN</span>
+              </div>
+            </div>
+
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="project-badge">UI/UX DESIGN</span>
+                <span class="project-num">[ 01 ]</span>
+              </div>
+              <h3 class="project-title">AURA</h3>
+              <p class="project-desc">Spatial audio controller companion app featuring room-scale rendering, acoustic silence tuning, and real-time audio visualization.</p>
+              <div class="project-tags">
+                <span>Spatial Audio</span>
+                <span>Hardware UI</span>
+                <span>Sound Design</span>
+              </div>
+              <div class="project-action">
+                <button class="widen-btn" type="button" aria-label="Widen Aura photo">
+                  <span>WIDEN PHOTO</span>
+                  <span class="widen-arrow">⤢</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Maya Chen -->
+          <article class="project-card" 
+            data-category="ui-ux" 
+            data-title="PIXELS WITH PERSONALITY" 
+            data-category-display="CREATIVE UI & INTERACTION"
+            data-desc="Vibrant, human-centered UI/UX design exploration featuring tactile card layers, expressive micro-interactions, and playful dashboard mechanics." 
+            data-accent="var(--deep-violet)"
+            data-tags="Creative UI, Micro-interactions, Visual Identity, Prototype"
+            data-src="/maya.png"
+            tabindex="0"
+            role="button"
+            aria-label="View Maya Chen Project details and widen photo">
+            
+            <div class="project-img-wrapper">
+              <img src="/maya.png" alt="Maya Chen - Pixels with Personality" class="project-img" loading="lazy" />
+              <div class="expand-indicator">
+                <span class="expand-icon">⤢</span>
+                <span>CLICK TO WIDEN</span>
+              </div>
+            </div>
+
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="project-badge" style="border-color: #a855f7; color: #c084fc;">INTERACTION</span>
+                <span class="project-num">[ 02 ]</span>
+              </div>
+              <h3 class="project-title">PIXELS WITH PERSONALITY</h3>
+              <p class="project-desc">Vibrant UI/UX exploration creating warm, playful digital products with layered card mechanics, bold typography, and micro-interactions.</p>
+              <div class="project-tags">
+                <span>Mobile UX</span>
+                <span>Micro-Interactions</span>
+                <span>Visual Identity</span>
+              </div>
+              <div class="project-action">
+                <button class="widen-btn" type="button" aria-label="Widen Maya Chen photo">
+                  <span>WIDEN PHOTO</span>
+                  <span class="widen-arrow">⤢</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Maya Okafor -->
+          <article class="project-card" 
+            data-category="design-system" 
+            data-title="MAYA OKAFOR — Design Systems" 
+            data-category-display="DESIGN SYSTEM & BRAND ARCHITECTURE"
+            data-desc="Comprehensive design system, multi-platform design tokens, data visualization components, and cohesive brand architecture for high-growth tech products." 
+            data-accent="var(--chrome)"
+            data-tags="Design Tokens, Data Viz, Brand Identity, Motion"
+            data-src="/maya2.png"
+            tabindex="0"
+            role="button"
+            aria-label="View Maya Okafor Design System details and widen photo">
+            
+            <div class="project-img-wrapper">
+              <img src="/maya2.png" alt="Maya Okafor Design System and Tokens" class="project-img" loading="lazy" />
+              <div class="expand-indicator">
+                <span class="expand-icon">⤢</span>
+                <span>CLICK TO WIDEN</span>
+              </div>
+            </div>
+
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="project-badge" style="border-color: #60a5fa; color: #93c5fd;">DESIGN SYSTEM</span>
+                <span class="project-num">[ 03 ]</span>
+              </div>
+              <h3 class="project-title">MAYA OKAFOR</h3>
+              <p class="project-desc">Cross-platform design system architecture, financial banking rebrand, data visualization dashboards, and comprehensive component tokens.</p>
+              <div class="project-tags">
+                <span>Design Tokens</span>
+                <span>Data Viz</span>
+                <span>Design System</span>
+              </div>
+              <div class="project-action">
+                <button class="widen-btn" type="button" aria-label="Widen Maya Okafor photo">
+                  <span>WIDEN PHOTO</span>
+                  <span class="widen-arrow">⤢</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: Voltage -->
+          <article class="project-card" 
+            data-category="branding" 
+            data-title="VOLTAGE — Festival of Noise" 
+            data-category-display="BRUTALIST IDENTITY & DIGITAL POSTER"
+            data-desc="High-impact brutalist typographic event identity and web campaign, combining kinetic acid-green grids, high-frequency waveforms, and industrial aesthetic." 
+            data-accent="#ff00ff"
+            data-tags="Brutalism, Typography, Poster Design, Event Identity"
+            data-src="/voltage.png"
+            tabindex="0"
+            role="button"
+            aria-label="View Voltage Festival details and widen photo">
+            
+            <div class="project-img-wrapper">
+              <img src="/voltage.png" alt="Voltage - Festival of Noise Brutalist Identity" class="project-img" loading="lazy" />
+              <div class="expand-indicator">
+                <span class="expand-icon">⤢</span>
+                <span>CLICK TO WIDEN</span>
+              </div>
+            </div>
+
+            <div class="project-info">
+              <div class="project-meta">
+                <span class="project-badge" style="border-color: #ec4899; color: #f472b6;">BRANDING</span>
+                <span class="project-num">[ 04 ]</span>
+              </div>
+              <h3 class="project-title">VOLTAGE</h3>
+              <p class="project-desc">Brutalist music festival digital campaign featuring raw kinetic grid structures, bold typographic hierarchy, and high-frequency wave visuals.</p>
+              <div class="project-tags">
+                <span>Brutalist Web</span>
+                <span>Typography</span>
+                <span>Poster Art</span>
+              </div>
+              <div class="project-action">
+                <button class="widen-btn" type="button" aria-label="Widen Voltage photo">
+                  <span>WIDEN PHOTO</span>
+                  <span class="widen-arrow">⤢</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Navigation Orb -->
+  <div id="nav-orb">
+    <div class="orb-ring"></div>
+    <div class="orb-core"></div>
+    <div class="menu-tag">MENU</div>
+    <div class="radial-menu">
+      <a class="menu-item" href="/">HOME</a>
+      <a class="menu-item" href="/about.html">ABOUT</a>
+      <a class="menu-item active" href="/work.html">WORK</a>
+      <a class="menu-item" href="/lab.html">LAB</a>
+      <a class="menu-item" href="/contact.html">CONTACT</a>
+    </div>
+  </div>
+
+  <!-- Lightbox Modal (Widened Project Photo View) -->
+  <div id="lightbox-modal" class="lightbox-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Expanded Project View">
+    <div class="lightbox-backdrop"></div>
+    <div class="lightbox-content">
+      
+      <!-- Top Bar -->
+      <header class="lightbox-header">
+        <div class="lightbox-meta">
+          <span class="lightbox-category">[ WORK // PREVIEW ]</span>
+          <h3 class="lightbox-title">PROJECT TITLE</h3>
+        </div>
+        <div class="lightbox-controls">
+          <span class="lightbox-counter">01 / 04</span>
+          <button type="button" class="lightbox-control-btn" id="lightbox-zoom-btn" title="Toggle 100% Zoom">
+            <span class="btn-text">100% ZOOM</span>
+          </button>
+          <button type="button" class="lightbox-control-btn close-btn" id="lightbox-close-btn" title="Close Expanded View (Esc)">
+            <span>CLOSE</span>
+            <span class="close-symbol">&times;</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Main Stage -->
+      <div class="lightbox-body">
+        <button type="button" class="lightbox-nav-btn prev-btn" id="lightbox-prev-btn" aria-label="Previous photo" title="Previous photo (← key)">
+          &#8592;
+        </button>
+        
+        <div class="lightbox-stage">
+          <img src="" alt="Expanded project graphic" class="lightbox-img" id="lightbox-img" />
+        </div>
+
+        <button type="button" class="lightbox-nav-btn next-btn" id="lightbox-next-btn" aria-label="Next photo" title="Next photo (→ key)">
+          &#8594;
+        </button>
+      </div>
+
+      <!-- Bottom Bar -->
+      <footer class="lightbox-footer">
+        <div class="lightbox-info">
+          <p class="lightbox-desc"></p>
+          <div class="lightbox-tags-container"></div>
+        </div>
+        <div class="lightbox-keyboard-hint">
+          <span>NAV: [ &larr; / &rarr; ]</span>
+          <span>&bull;</span>
+          <span>CLICK PHOTO TO ZOOM</span>
+          <span>&bull;</span>
+          <span>[ ESC ] TO EXIT</span>
+        </div>
+      </footer>
+
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

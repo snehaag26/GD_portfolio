@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Lab | Sneha Agrawal — UI/UX Designer</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <!-- Grain Overlay & Grid -->
+  <div class="grain-overlay"></div>
+  <div class="grid-overlay"></div>
+  <div class="scan-line"></div>
+
+  <!-- Corner UI Framing -->
+  <div class="corner-ui top-left">SYS.VER: 9.0.4</div>
+  <div class="corner-ui top-right">STATUS: ONLINE</div>
+  <div class="corner-ui bottom-left">[ GEO: 34.0522, -118.2437 ]</div>
+
+  <!-- Background Layers -->
+  <div id="layer-bg"></div>
+  <div id="layer-mid"></div>
+
+  <!-- Custom Cursor -->
+  <div id="custom-cursor">
+    <div class="cursor-inner"></div>
+    <div class="cursor-label"></div>
+  </div>
+
+  <!-- Global Site Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="nav-brand">
+        <span class="brand-code">SYS.01 //</span>
+        <span class="brand-name">SNEHA AGRAWAL</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main Navigation">
+        <a href="/" class="nav-link" data-page="home">
+          <span class="nav-idx">01</span>HOME
+        </a>
+        <a href="/about.html" class="nav-link" data-page="about">
+          <span class="nav-idx">02</span>ABOUT
+        </a>
+        <a href="/work.html" class="nav-link" data-page="work">
+          <span class="nav-idx">03</span>WORK
+        </a>
+        <a href="/lab.html" class="nav-link active" data-page="lab">
+          <span class="nav-idx">04</span>LAB
+        </a>
+        <a href="/contact.html" class="nav-link" data-page="contact">
+          <span class="nav-idx">05</span>CONTACT
+        </a>
+      </nav>
+
+      <div class="header-status">
+        <span class="status-pulse"></span>
+        <span class="status-text">THE LAB // EXPERIMENTS</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content (Foreground) -->
+  <div id="app" class="foreground">
+
+    <!-- Section: Lab Workspace -->
+    <section id="workspace" class="panel lab-section" style="padding-top: 100px; flex-direction: column; align-items: center; gap: 3rem;">
+
+      <!-- Header -->
+      <div class="lab-header" style="text-align:center;">
+        <div class="work-tag" style="text-align:center; justify-content:center; display:flex;">[ SYS.LOG: EXPERIMENTS // LAB_MODE_ACTIVE ]</div>
+        <h1 class="section-title" style="align-self:center; text-align:center;">THE LAB</h1>
+        <p style="font-family: var(--font-mono); font-size: 0.9rem; color: rgba(240,240,240,0.7); max-width: 600px; line-height:1.6; margin: 0.5rem auto 0;">
+          Interactive digital workspace. <span style="color:var(--acid-green)">Drag widgets</span> around the desk. 
+          Explore creative tools and design utilities.
+        </p>
+      </div>
+
+      <!-- Desk Area -->
+      <div class="desk-area">
+
+        <!-- Terminal Widget -->
+        <div class="drag-item lab-terminal" data-label="TERMINAL" style="width:340px; height:220px; background:#050508; border:1px solid var(--acid-green); border-radius:12px; top:8%; left:5%; display:flex; flex-direction:column; overflow:hidden; box-shadow: 0 0 30px rgba(204,255,0,0.15);">
+          <div class="browser-header" style="background:#111; border-bottom:1px solid rgba(204,255,0,0.2); gap:8px;">
+            <span style="width:10px;height:10px;border-radius:50%;background:#ff5f56;"></span>
+            <span style="width:10px;height:10px;border-radius:50%;background:#ffbd2e;"></span>
+            <span style="width:10px;height:10px;border-radius:50%;background:var(--acid-green);"></span>
+            <span style="font-family:var(--font-mono);font-size:0.7rem;color:rgba(204,255,0,0.6);margin-left:8px;">terminal — sneha@lab</span>
+          </div>
+          <div id="terminal-output" style="flex:1;padding:0.75rem 1rem;font-family:var(--font-mono);font-size:0.72rem;color:var(--acid-green);overflow:hidden;line-height:1.7;">
+            <div><span style="color:rgba(204,255,0,0.5);">$</span> whoami</div>
+            <div>sneha_agrawal // ui-ux-designer</div>
+            <div><span style="color:rgba(204,255,0,0.5);">$</span> skills --list</div>
+            <div id="terminal-typing" style="white-space:pre;"></div>
+          </div>
+        </div>
+
+        <!-- Color Swatches -->
+        <div class="drag-item swatches" data-label="PALETTE" style="top:8%; right:18%; flex-direction:column; gap:0; background:rgba(18,18,24,0.9); border:1px solid rgba(255,255,255,0.1); border-radius:12px; padding:12px; width:130px;">
+          <div style="font-family:var(--font-mono);font-size:0.6rem;color:rgba(240,240,240,0.4);margin-bottom:8px;letter-spacing:0.1em;">PALETTE</div>
+          <div style="display:flex;flex-direction:column;gap:6px;">
+            <div style="display:flex;align-items:center;gap:8px;"><div class="color-box" style="background:var(--acid-green);border-radius:4px;width:28px;height:28px;"></div><span style="font-family:var(--font-mono);font-size:0.6rem;color:rgba(240,240,240,0.6);">#CCFF00</span></div>
+            <div style="display:flex;align-items:center;gap:8px;"><div class="color-box" style="background:var(--deep-violet);border-radius:4px;width:28px;height:28px;"></div><span style="font-family:var(--font-mono);font-size:0.6rem;color:rgba(240,240,240,0.6);">#4A00E0</span></div>
+            <div style="display:flex;align-items:center;gap:8px;"><div class="color-box" style="background:#ff3366;border-radius:4px;width:28px;height:28px;"></div><span style="font-family:var(--font-mono);font-size:0.6rem;color:rgba(240,240,240,0.6);">#FF3366</span></div>
+            <div style="display:flex;align-items:center;gap:8px;"><div class="color-box" style="background:#0d0d12;border:1px solid rgba(255,255,255,0.2);border-radius:4px;width:28px;height:28px;"></div><span style="font-family:var(--font-mono);font-size:0.6rem;color:rgba(240,240,240,0.6);">#0D0D12</span></div>
+          </div>
+        </div>
+
+        <!-- Clock Widget -->
+        <div class="drag-item widget-clock" data-label="TIME" style="bottom:12%; right:5%; border-radius:16px; padding:1.25rem 1.5rem; min-width:170px; border:1px solid rgba(255,255,255,0.1);">
+          <div style="font-family:var(--font-mono);font-size:0.6rem;color:rgba(240,240,240,0.4);margin-bottom:6px;letter-spacing:0.15em;">LOCAL TIME</div>
+          <div class="clock-time" style="font-family:var(--font-display);font-size:2.2rem;font-weight:900;color:var(--acid-green);letter-spacing:-0.02em;">12:00:00</div>
+          <div id="lab-date" style="font-family:var(--font-mono);font-size:0.65rem;color:rgba(240,240,240,0.5);margin-top:4px;"></div>
+        </div>
+
+        <!-- Typewriter Quote Card -->
+        <div class="drag-item" data-label="QUOTE" style="bottom:12%; left:5%; background:rgba(74,0,224,0.15); border:1px solid rgba(74,0,224,0.4); border-radius:12px; padding:1.25rem 1.5rem; width:260px;">
+          <div style="font-family:var(--font-mono);font-size:0.6rem;color:rgba(168,85,247,0.7);margin-bottom:8px;letter-spacing:0.1em;">// DESIGN PRINCIPLE</div>
+          <div id="quote-text" style="font-family:var(--font-mono);font-size:0.82rem;color:rgba(240,240,240,0.9);line-height:1.6;min-height:60px;"></div>
+          <div style="font-family:var(--font-mono);font-size:0.65rem;color:rgba(168,85,247,0.6);margin-top:10px;" id="quote-author"></div>
+        </div>
+
+        <!-- Tablet/Mood Board Placeholder -->
+        <div class="drag-item" data-label="MOOD" style="top:30%; left:35%; background:rgba(18,18,24,0.8);border:1px solid rgba(255,255,255,0.08);border-radius:12px;width:240px;height:160px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;">
+          <div style="font-family:var(--font-mono);font-size:0.65rem;color:rgba(240,240,240,0.35);letter-spacing:0.15em;">MOOD BOARD</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;width:140px;">
+            <div style="height:52px;border-radius:6px;background:linear-gradient(135deg,#ccff00,#4a00e0);"></div>
+            <div style="height:52px;border-radius:6px;background:linear-gradient(135deg,#ff3366,#ff9900);"></div>
+            <div style="height:52px;border-radius:6px;background:linear-gradient(135deg,#0d0d12,#1a1a2e);border:1px solid rgba(255,255,255,0.1);"></div>
+            <div style="height:52px;border-radius:6px;background:linear-gradient(135deg,#e0e0e0,#888);"></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Tool Cards Grid -->
+      <div class="lab-tools-grid">
+        <div class="lab-tool-card">
+          <div class="lab-tool-icon">✦</div>
+          <h3 class="lab-tool-title">Figma</h3>
+          <p class="lab-tool-desc">UI design, prototyping, and component library authoring.</p>
+          <div class="lab-tool-tag">PRIMARY TOOL</div>
+        </div>
+        <div class="lab-tool-card">
+          <div class="lab-tool-icon">⬡</div>
+          <h3 class="lab-tool-title">Framer</h3>
+          <p class="lab-tool-desc">High-fidelity interactive prototypes and web publishing.</p>
+          <div class="lab-tool-tag">PROTOTYPING</div>
+        </div>
+        <div class="lab-tool-card">
+          <div class="lab-tool-icon">◈</div>
+          <h3 class="lab-tool-title">After Effects</h3>
+          <p class="lab-tool-desc">Motion graphics, transitions, and microinteraction design.</p>
+          <div class="lab-tool-tag">MOTION</div>
+        </div>
+        <div class="lab-tool-card">
+          <div class="lab-tool-icon">⌬</div>
+          <h3 class="lab-tool-title">Spline</h3>
+          <p class="lab-tool-desc">3D scene composition and real-time web 3D interactions.</p>
+          <div class="lab-tool-tag">3D DESIGN</div>
+        </div>
+        <div class="lab-tool-card">
+          <div class="lab-tool-icon">⟁</div>
+          <h3 class="lab-tool-title">HTML / CSS / JS</h3>
+          <p class="lab-tool-desc">Crafting pixel-perfect, animated web experiences from scratch.</p>
+          <div class="lab-tool-tag">FRONT-END</div>
+        </div>
+        <div class="lab-tool-card">
+          <div class="lab-tool-icon">✿</div>
+          <h3 class="lab-tool-title">Procreate</h3>
+          <p class="lab-tool-desc">Digital illustration, concept sketching, and texture work.</p>
+          <div class="lab-tool-tag">ILLUSTRATION</div>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <!-- Navigation Orb -->
+  <div id="nav-orb">
+    <div class="orb-ring"></div>
+    <div class="orb-core"></div>
+    <div class="menu-tag">MENU</div>
+    <div class="radial-menu">
+      <a class="menu-item" href="/">HOME</a>
+      <a class="menu-item" href="/about.html">ABOUT</a>
+      <a class="menu-item" href="/work.html">WORK</a>
+      <a class="menu-item active" href="/lab.html">LAB</a>
+      <a class="menu-item" href="/contact.html">CONTACT</a>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

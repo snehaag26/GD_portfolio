@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Sneha Agrawal — UI/UX Designer</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <!-- Grain Overlay & Grid -->
+  <div class="grain-overlay"></div>
+  <div class="grid-overlay"></div>
+  <div class="scan-line"></div>
+
+  <!-- Corner UI Framing -->
+  <div class="corner-ui top-left">SYS.VER: 9.0.4</div>
+  <div class="corner-ui top-right">STATUS: ONLINE</div>
+  <div class="corner-ui bottom-left">[ GEO: 34.0522, -118.2437 ]</div>
+
+  <!-- Background Layers -->
+  <div id="layer-bg"></div>
+  <div id="layer-mid"></div>
+
+  <!-- Custom Cursor -->
+  <div id="custom-cursor">
+    <div class="cursor-inner"></div>
+    <div class="cursor-label"></div>
+  </div>
+
+  <!-- Global Site Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="nav-brand">
+        <span class="brand-code">SYS.01 //</span>
+        <span class="brand-name">SNEHA AGRAWAL</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main Navigation">
+        <a href="/" class="nav-link" data-page="home">
+          <span class="nav-idx">01</span>HOME
+        </a>
+        <a href="/about.html" class="nav-link active" data-page="about">
+          <span class="nav-idx">02</span>ABOUT
+        </a>
+        <a href="/work.html" class="nav-link" data-page="work">
+          <span class="nav-idx">03</span>WORK
+        </a>
+        <a href="/lab.html" class="nav-link" data-page="lab">
+          <span class="nav-idx">04</span>LAB
+        </a>
+        <a href="/contact.html" class="nav-link" data-page="contact">
+          <span class="nav-idx">05</span>CONTACT
+        </a>
+      </nav>
+
+      <div class="header-status">
+        <span class="status-pulse"></span>
+        <span class="status-text">ABOUT // ONLINE</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content (Foreground) -->
+  <div id="app" class="foreground">
+
+    <!-- Section: About (Reads in one go!) -->
+    <section id="about" class="panel split-screen relative-panel" style="min-height: calc(100vh - 72px); padding-top: 100px;">
+      <div class="marquee-bg">
+        <div class="marquee-track">
+          <span>DIGITAL BRUTALISM — CHAOS AND CONTROL — </span>
+          <span>DIGITAL BRUTALISM — CHAOS AND CONTROL — </span>
+          <span>DIGITAL BRUTALISM — CHAOS AND CONTROL — </span>
+          <span>DIGITAL BRUTALISM — CHAOS AND CONTROL — </span>
+        </div>
+      </div>
+
+      <div class="about-left">
+        <div class="avatar-container">
+          <img src="/sneha.jpg" alt="Sneha Agrawal" class="avatar-img" />
+          <div class="avatar-glitch-layer layer-1"></div>
+          <div class="avatar-glitch-layer layer-2"></div>
+        </div>
+        <div class="skills-constellation">
+          <!-- Draggable skill nodes -->
+          <div class="skill-node">UI/UX</div>
+          <div class="skill-node">Creative Dev</div>
+          <div class="skill-node">Motion</div>
+          <div class="skill-node">3D</div>
+        </div>
+      </div>
+
+      <div class="about-right glass-panel">
+        <div class="about-label">[ SYS.LOG: IDENTITY ]</div>
+        <h2 class="about-headline">Creating intuitive, user-centered digital products.</h2>
+        
+        <p class="about-bio">Hi, I'm <span class="highlight">Sneha</span> — a passionate UI/UX designer dedicated to
+          creating <span class="highlight">intuitive</span>, <span class="highlight">user-centered</span>, and visually
+          engaging digital experiences. I enjoy transforming ideas into meaningful interfaces by blending creativity
+          with thoughtful problem-solving. With a strong eye for detail and a constant drive to learn, I strive to
+          design products that are not only beautiful but also <span class="highlight">effortless to use</span>.</p>
+
+        <div class="tech-specs">
+          <div class="spec-row"><span>Pixels</span><span>crafted with intent</span></div>
+          <div class="spec-row"><span>Problem</span><span>solved through design</span></div>
+          <div class="spec-row"><span>Ideas</span><span>prototyped rapidly</span></div>
+        </div>
+
+        <div class="stats">
+          <div class="stat"><span class="count" data-target="42">42</span> PROJECTS</div>
+          <div class="stat"><span class="count" data-target="1337">1337</span> COFFEES</div>
+          <div class="stat"><span class="count" data-target="5">5</span> YEARS OF CHAOS</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Timeline (Experience & Education) -->
+    <section id="timeline" class="panel timeline-panel">
+      <div class="timeline-container">
+        <div class="timeline-col">
+          <h2 class="section-title">EXPERIENCE</h2>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-panel-small">
+              <div class="timeline-date">[ CLASS 11TH & 12TH ]</div>
+              <div class="timeline-role">Editorial Head & Lead Designer</div>
+              <div class="timeline-desc">Handled all magazine work and everything related to designing for the school.
+                Orchestrated visual identity for school events and publications.</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-panel-small">
+              <div class="timeline-date">[ CLASS 10TH // 5 MONTHS ]</div>
+              <div class="timeline-role">Graphic Design Intern</div>
+              <div class="timeline-desc">Interned as a graphic designer. Worked closely with the school to design
+                magazine layouts and essential templates.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-col">
+          <h2 class="section-title">EDUCATION</h2>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-panel-small">
+              <div class="timeline-date">[ 2025 - 2029 ]</div>
+              <div class="timeline-role">B.Tech CS & AI</div>
+              <div class="timeline-desc">Newton School of Technology</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-panel-small">
+              <div class="timeline-date">[ 2025 ]</div>
+              <div class="timeline-role">Class 12th (CBSE)</div>
+              <div class="timeline-desc">Academic World School</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-panel-small">
+              <div class="timeline-date">[ 2023 ]</div>
+              <div class="timeline-role">Class 10th (ICSE)</div>
+              <div class="timeline-desc">Carmel Public School</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Navigation Orb -->
+  <div id="nav-orb">
+    <div class="orb-ring"></div>
+    <div class="orb-core"></div>
+    <div class="menu-tag">MENU</div>
+    <div class="radial-menu">
+      <a class="menu-item" href="/">HOME</a>
+      <a class="menu-item active" href="/about.html">ABOUT</a>
+      <a class="menu-item" href="/work.html">WORK</a>
+      <a class="menu-item" href="/lab.html">LAB</a>
+      <a class="menu-item" href="/contact.html">CONTACT</a>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

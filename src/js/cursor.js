@@ -28,7 +28,7 @@ export function initCursor() {
   };
   requestAnimationFrame(updateCursor);
 
-  // Hover states
+  // Hover states helper
   const addHoverState = (elements, stateClass, labelText = '') => {
     elements.forEach(el => {
       el.addEventListener('mouseenter', () => {
@@ -45,9 +45,30 @@ export function initCursor() {
   // Buttons & Links
   addHoverState(document.querySelectorAll('a, button, .magnetic-btn, .menu-item'), 'hover-btn', 'CLICK');
   
-  // Project Cards
-  addHoverState(document.querySelectorAll('.project-card'), 'hover-lens', 'VIEW');
+  // Project Cards & Photos -> WIDEN
+  addHoverState(document.querySelectorAll('.project-card, .project-img-wrapper'), 'hover-lens', 'WIDEN');
+  addHoverState(document.querySelectorAll('.widen-btn'), 'hover-btn', 'EXPAND');
+  addHoverState(document.querySelectorAll('.filter-btn'), 'hover-btn', 'FILTER');
+
+  // Lightbox Controls
+  addHoverState(document.querySelectorAll('.lightbox-close-btn, .lightbox-backdrop'), 'hover-btn', 'CLOSE');
+  addHoverState(document.querySelectorAll('#lightbox-zoom-btn'), 'hover-btn', 'ZOOM');
+  addHoverState(document.querySelectorAll('.prev-btn'), 'hover-btn', 'PREV');
+  addHoverState(document.querySelectorAll('.next-btn'), 'hover-btn', 'NEXT');
+  addHoverState(document.querySelectorAll('.lightbox-img'), 'hover-lens', 'ZOOM');
   
   // Draggables
-  addHoverState(document.querySelectorAll('.drag-item, .skill-node, .orb-core'), 'hover-btn', 'DRAG');
+  addHoverState(document.querySelectorAll('.drag-item, .skill-node'), 'hover-btn', 'DRAG');
+
+  // Nav Orb: Hide custom cursor so it does not overlap the orb icon or menu tags
+  const navOrb = document.getElementById('nav-orb');
+  if (navOrb) {
+    navOrb.addEventListener('mouseenter', () => {
+      cursor.style.opacity = '0';
+      cursor.style.pointerEvents = 'none';
+    });
+    navOrb.addEventListener('mouseleave', () => {
+      cursor.style.opacity = '1';
+    });
+  }
 }
