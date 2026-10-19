@@ -60,16 +60,20 @@ export function initAnimations() {
   const stats = document.querySelectorAll('.stat .count');
   stats.forEach(stat => {
     const target = parseInt(stat.getAttribute('data-target'));
+    const suffix = stat.textContent.includes('+') ? '+' : '';
+    const counterObj = { val: 0 };
     ScrollTrigger.create({
       trigger: stat,
       start: 'top 95%',
       once: true,
       onEnter: () => {
-        gsap.to(stat, {
-          innerHTML: target,
+        gsap.to(counterObj, {
+          val: target,
           duration: 1.8,
-          snap: { innerHTML: 1 },
-          ease: 'power2.out'
+          ease: 'power2.out',
+          onUpdate: () => {
+            stat.innerHTML = Math.round(counterObj.val) + suffix;
+          }
         });
       }
     });
